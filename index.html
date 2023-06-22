@@ -2,6 +2,8 @@
 <html>
 <head>
   
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Ketner Lake</title>
 
   <style>
@@ -25,7 +27,7 @@
       background-color: #216290;
       display: flex;
       flex-direction: column;
-      height: 100vh;
+      height: 100dvh;
     }
 
     section:first-of-type article {    
@@ -110,6 +112,76 @@
       margin: 0;
       padding: 4px 0 4px 0;
     }    
+
+    @media ( max-width: 1250px ) {
+      :root {
+        --content-width: 75%;
+      }
+
+      section:first-of-type article img {        
+        border: solid 10px #ffffff;
+        border-radius: 260px;
+        height: 260px;
+        width: 260px;
+      }
+
+      section:first-of-type article p,            
+      section:first-of-type li {    
+        font-size: 32px;
+      }
+    }
+
+    @media ( max-width: 850px ) {
+      :root {
+        --content-width: 80%;
+      }
+
+      section:first-of-type {
+        height: auto;
+      }
+
+      section:first-of-type article {    
+        flex-direction: column;
+      }
+
+      section:first-of-type article img {        
+        border: solid 8px #ffffff;
+        border-radius: 150px;
+        display: none;
+        height: 150px;
+        width: 150px;
+      }
+
+      section:first-of-type article p:first-of-type {    
+        padding: 50px 0 0 0;
+      }
+
+      section:first-of-type article p:last-of-type {    
+        padding: 0 0 85px 0;
+      }
+
+      section:first-of-type footer {    
+        display: none;
+      }
+
+      section:first-of-type li,
+      section:first-of-type article p {    
+        display: inline-block;
+        font-size: 32px;
+      }
+
+      section:first-of-type ul {    
+        display: block;
+      }
+
+      section:first-of-type li::after {
+        content: ',';
+      }      
+
+      section:first-of-type li:last-of-type::after {      
+        content: '';
+      }
+    }
   </style>
 
 </head>
@@ -124,7 +196,7 @@
     </header>
     <article>
       <div>
-        <p>High-quality, standards-based</p>
+        <p>Open source, standards-based</p>
         <ul>
           <li>documentation</li>
           <li>web components</li>
